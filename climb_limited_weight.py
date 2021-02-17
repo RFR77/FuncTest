@@ -2,23 +2,24 @@ from scipy import interpolate
 import numpy as np
 import pandas as pd
 #Open xcel and read the sheet MTOPS
-pd.read_excel('page_1-1.xlsx', sheet_name="MTOPS")
+x = pd.read_excel('page_1-1.xlsx', sheet_name="MTOPS") #, index_col=None, na_values=["NA"])
+print(x)
 #open an empty lists to dump values in.
-temp = []
-alt = []
-wt = []
+#temp = []
+#alt = []
+#   wt = []
 
-for row in range(1, sheet.max_row + 1):
+#for row in range(1, sheet.max_row + 1):
     #row has an empty cell next to it, its an altitude and put in alt list.
-    if sheet['B'] == 'none':
-        z = sheet['A'].value
-        alt.append(z)
-    else:
-        x = sheet['A' + str(row)].value
-        y = sheet['B' + str(row)].value
-        temp.append(x)
-        wt.append(y)
-print(alt)
+#    if sheet['B'] == 'none':
+#        z = sheet['A'].value
+#        alt.append(z)
+#    else:
+#        x = sheet['A' + str(row)].value
+#        y = sheet['B' + str(row)].value
+#        temp.append(x)
+#        wt.append(y)
+#print(alt)
 #inputs for calculation
 #input_temp = int(input('What is the temperature? '))
 #input_alt = int(input('What is the altitude? '))
